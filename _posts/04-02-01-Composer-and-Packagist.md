@@ -61,20 +61,25 @@ require 'vendor/autoload.php';
 
 现在你就可以使用项目依赖的库了，它们会在需要的时候自动加载。
 
-### Updating your dependencies
+### 更新依赖
 
-Composer creates a file called `composer.lock` which stores the exact version of each package it downloaded when you first ran `php composer.phar install`. If you share your project with other coders and the `composer.lock` file is part of your distribution, when they run `php composer.phar install` they'll get the same versions as you. To update your dependencies, run `php composer.phar update`.
+当你首次执行`php composer.phar install`命令时，Composer会创建一个叫做`composer.lock`的文件，其中保存了所下载的每个依赖库
+确切的版本信息。 如果你把`composer.lock`作为项目的组成部分共享给其他程序，当他们执行`php composer.phar install`命令时，他
+们将会得到与你版本相同依赖库。如果要更新你的依赖库，执行`php composer.phar update`即可。
 
-This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
+当你想要灵活的指定所需依赖库的版本时，这将会非常有用。比如~1.8的版本要求表示“任何比1.8.0新，但不超过2.0.x-dev的版本”。你
+也可以使用`*`通配符如`1.8.*`。这样Composer的`php composer.phar update`命令将会把所有的依赖库升级到满足你所指定条件的最新
+版本。
 
-### Update Notifications
+### 更新通知
 
-To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor 
-your GitHub and BitBucket accounts for `composer.json` files and send emails with new package releases.
+想要收到依赖库新版发布的通知，你可以注册一个[VersionEye][3]账号，这是一个监控你GitHub和BitBucket上的`composer.json`文件并
+通过邮件发送依赖库更新通知的web服务。
 
-### Checking your dependencies for security issues
+### 检查依赖包的安全问题
 
-The [Security Advisories Checker][4] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
+[Security Advisories Checker][4] 包括一个web服务和一个命令行工具, 两者都会检查你的`composer.lock`文件并告知你是否需要
+对所用到的依赖包进行升级。
 
 * [学习Composer][5]
 
