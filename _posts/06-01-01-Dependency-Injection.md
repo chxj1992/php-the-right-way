@@ -2,12 +2,11 @@
 title: Dependency Injection
 ---
 
-# Dependency Injection {#dependency_injection_title}
+# 依赖注入 {#dependency_injection_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
+来自 [维基百科](http://en.wikipedia.org/wiki/Dependency_injection):
 
-> Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it 
-> possible to change them, whether at run-time or compile-time.
+> 依赖注入是一种软件设计模式，它可以去除代码中硬编码的依赖关系，使我们不管在运行时期或是编译时期都能够改变代码的依赖。
 
-This quote makes the concept sound much more complicated than it actually is. Dependency Injection is providing a component 
-with it's dependencies either through constructor injection, method calls or the setting of properties. It is that simple.
+这段引述让依赖注入的概念听起来比实际上更加复杂。依赖注入是指通过构造器，方法调用或者设置属性值为组件配置依赖关系的方
+式。就这么简单。
